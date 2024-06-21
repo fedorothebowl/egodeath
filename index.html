@@ -10,24 +10,14 @@
 
     <div class="swiper text-2xl text-center h-full" x-data="carosello()">
       <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <div class="flex items-center justify-center h-full px-4 ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa quis dicta distinctio, voluptatem nobis reiciendis cupiditate laborum a consectetur hic!</div>
-        </div>
-        <div class="swiper-slide">
-          <div class="flex items-center justify-center h-full px-4 ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa quis dicta distinctio, voluptatem nobis reiciendis cupiditate laborum a consectetur hic!</div>
-        </div>
-        <div class="swiper-slide">
-          <div class="flex items-center justify-center h-full px-4 ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa quis dicta distinctio, voluptatem nobis reiciendis cupiditate laborum a consectetur hic!</div>
-        </div>
-        <div class="swiper-slide">
-          <div class="flex items-center justify-center h-full px-4 ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa quis dicta distinctio, voluptatem nobis reiciendis cupiditate laborum a consectetur hic!</div>
-        </div>
-        <div class="swiper-slide">
-          <div class="flex items-center justify-center h-full px-4 ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa quis dicta distinctio, voluptatem nobis reiciendis cupiditate laborum a consectetur hic!</div>
-        </div>
-        <div class="swiper-slide">
-          <div class="flex items-center justify-center h-full px-4 ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa quis dicta distinctio, voluptatem nobis reiciendis cupiditate laborum a consectetur hic!</div>
-        </div>
+        <template x-for="data in datas">
+          <div class="swiper-slide">
+            <div class="flex items-center justify-center h-full px-4 flex-col">
+              <h2 x-text="data.citazione"></h2>
+              <h3 class="mt-2  text-sm" x-text="data.autore"></h3>
+            </div>
+          </div>
+        </template>
       </div>
       <div class="swiper-pagination"></div>
     </div>
